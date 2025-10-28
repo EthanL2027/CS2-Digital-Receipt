@@ -4,9 +4,15 @@ public class Main {
    public static void main(String []args) {
       System.out.println("Receipt");
 
-      
+      Scanner input = new Scanner(System.in);
 
-     String highSchoolName = "Crenshaw";
+     String highSchoolName = "Birch Wathen Lenox";
+    String initials1 = highSchoolName. substring(0,1);
+    String initials2 = highSchoolName. substring(6,7);
+    String initials3 = highSchoolName. substring(13,14);
+    System.out.println(initials1 + initials2 + initials3);
+
+
      double drinkPrice = 1.50;
      double candyPrice = 1.25;
      double hotdogPrice = 2.75;
@@ -15,16 +21,16 @@ public class Main {
        double orderNumber = (int) ( Math.random() * 100)+1;
      System.out.println("Order Number: " + orderNumber);
 
-     double drinksOrdered = (int) (Math.random() * 10)+1;
+     double drinksOrdered = input.nextInt();
      System.out.println("Drinks ordered: " + drinksOrdered);
 
-     double candyOrdered = (int) (Math.random() * 10)+1;
+     double candyOrdered = input.nextInt();
      System.out.println("Candy ordered: " + candyOrdered);
 
-     double hotdogsOrdered = (int) (Math.random() * 10)+1;
+     double hotdogsOrdered = input.nextInt();
      System.out.println("Hot dogs ordered: " + hotdogsOrdered);
 
-     double hamburgersOrdered = (int) (Math.random() * 10)+1;
+     double hamburgersOrdered = input.nextInt();
      System.out.println("Hamburgers ordered: " + hamburgersOrdered);
       
       double taxRate = 0.08;
@@ -46,7 +52,7 @@ public class Main {
       // RECEIPT PRINTOUT SECTION
      System.out.println("**************************************");
      System.out.println("*                                    *");
-     System.out.println("*     " + highSchoolName + " Snack Bar             *");
+     System.out.println("*     " + highSchoolName + " Snack Bar   *");
      System.out.println("*                                    *");
      System.out.println("*     Drink ..........$" + drinkPrice + "           *");                      
      System.out.println("*     Candy ..........$" + candyPrice + "          *");     
